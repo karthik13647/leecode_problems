@@ -5,7 +5,7 @@ class Solution:
         for ele in s:
             a[ord(ele)-97]+=1
         for ele in t:
-            a[ord(ele)-97]-=1
+            a[ord(ele)-97]-=1   # convert it not number
         for el in a:
             if el:
                 return False
