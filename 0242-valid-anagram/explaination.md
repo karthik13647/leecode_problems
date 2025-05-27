@@ -1,23 +1,34 @@
-Explaination
-So, here we will go for the Counter function which is prints the char as below.
+# Anagram Checker
 
+## Explanation
+
+### Method 1: Using `Counter` Function
+The `Counter` function from the `collections` module creates a dictionary-like object where the keys are elements from the input, and the values are the counts of those elements.
+
+#### Example:
+```python
 Counter(s) = {'l': 1, 'i': 1, 's': 1, 't': 1, 'e': 1, 'n': 1}
+```
 
-Counter creates a dictionary-like object where the keys are elements from the input, and the values are the counts of those elements.
+The comparison checks if two strings have identical character frequencies by comparing the resulting dictionaries.
 
-so the compare the two string in the form of dictionary
+#### Time Complexity:
+- **\(O(m + n)\):** where \(m\) and \(n\) are the lengths of the two strings.
 
-Time Complexity:
-𝑂(m)O(n), where m,𝑛 is the length of the strings.
+#### Space Complexity:
+- **\(O(k)\):** where \(k\) is the number of unique characters in the strings.
 
-Space Complexity: 𝑂(𝑘)
-O(k), where 𝑘 is the number of unique characters.
+### Method 2: Using a Fixed-Size Array (Optimal)
+In this method:
+1. Create a list of size 26 (corresponding to the English alphabet) initialized with zeros.
+2. Traverse the first string and increment the corresponding index for each character using `ord()`.
+3. Traverse the second string and decrement the corresponding index for each character.
+4. Check the list for any non-zero values to determine if the strings are anagrams.
 
-Another method(Optimal)
-Here, i cretaed a list with length of 26 with all are zeroes and then use for loops for each string and convert them each character cconverted ascii code using ord() and then in other loop with other string, debut the value in list.
-So that we can know the characters are present or not. then traverse with forr loop in the list add look for the number other then zero . if it is present then we return False if not we return True
+#### Summary:
+- **Time Complexity:** \(O(n + m)\)
+- **Space Complexity:** \(O(1)\)
 
-so the Summary:
-Time Complexity: O(n+m)
-
-Space Complexity: O(1)
+### Key Insights:
+- The `Counter` method is more Pythonic but requires additional space for the dictionary.
+- The fixed-size array method is optimal in terms of space, utilizing constant space regardless of the input size.
