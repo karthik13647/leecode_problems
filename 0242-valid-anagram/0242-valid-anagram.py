@@ -1,12 +1,12 @@
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
         #return Counter(s)==Counter(t)
-        a=[0 for i in range(26)]
+        l=[0]*26
         for ele in s:
-            a[ord(ele)-97]+=1
+            l[ord(ele)-97]+=1
         for ele in t:
-            a[ord(ele)-97]-=1   # convert it not number
-        for el in a:
-            if el:
+            l[ord(ele)-97]-=1
+        for ele in l:
+            if ele!=0:
                 return False
         return True
