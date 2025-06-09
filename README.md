@@ -1,3 +1,3 @@
 # leecode_problems
 
-#easy
+# easy
