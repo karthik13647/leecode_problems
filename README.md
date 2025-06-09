@@ -2,6 +2,6 @@
 
 
 # It contains 3 types
-# easy
-# medium
+ easy
+ medium
 # hard
