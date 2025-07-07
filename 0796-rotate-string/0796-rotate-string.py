@@ -14,7 +14,6 @@ class Solution:
         #     if s[i]!=goal[(val+i)%n]:
         #         return False
         # return True
-
         if len(s)!=len(goal):
             return False
         return goal in s+s
