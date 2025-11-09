@@ -16,4 +16,4 @@
 
 select max(e2.salary) SecondHighestSalary 
 from employee e1,employee e2
-where e1.salary>e2.salary;
+where e1.salary>e2.salary
